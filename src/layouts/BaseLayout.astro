@@ -10,17 +10,28 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.prop
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="cupcake">
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
+  <!-- Put this part before </body> tag -->
+  <input type="checkbox" id="contact" class="modal-toggle" />
+  <label for="contact" class="modal cursor-pointer">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Contact</h3>
+      <p class="py-3">If you'd like to get in touch with me, you can send an email to <span class="badge badge-ghost">hello@krishna-santosh.com</span> or contact me via my social media accounts. Just send me a message on whichever platform you prefer, and I'll do my best to respond as soon as possible. Thank you for reaching out!</p>
+      <div class="modal-action">
+      <a href="mailto:hello@krishna-santosh.com" class="btn">Send Mail</a>
+      </div>
+    </div>
+  </label>
   <body>
     <div class="bg-base-100 drawer drawer-mobile">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col bg-base-100">
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 max-w-[900px]">
+          <main class="p-6 pt-10 lg:pt-0 max-w-[900px]">
             <slot />
           </main>
         </div>

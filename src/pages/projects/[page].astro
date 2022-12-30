@@ -14,17 +14,18 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title="Projects">
   <ul>
     <!--List the array of astronaut info-->
     {
-      page.data.map((post) => (
+      page.data.map((project) => (
         <>
           <HorizontalCard
-            title={post.frontmatter.title}
-            img={post.frontmatter.heroImage}
-            desc={post.frontmatter.description}
-            url={post.url}
+            title={project.frontmatter.title}
+            img={project.frontmatter.heroImage}
+            desc={project.frontmatter.description}
+            url={project.url}
+            badge={project.frontmatter.badge}
             target="_self"
           />
           <div class="divider my-0" />
@@ -47,7 +48,7 @@ const { page } = Astro.props;
           >
             <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
           </svg>{" "}
-          Recent posts
+          Recent projects
         </a>
       ) : (
         <div />
@@ -56,7 +57,7 @@ const { page } = Astro.props;
     {
       page.url.next ? (
         <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
+          Older projects{" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"

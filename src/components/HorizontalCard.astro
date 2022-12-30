@@ -7,7 +7,7 @@ const { title, img, desc, url, badge, tags, target = '_blank' } = Astro.props;
     <div class="hero-content flex-col md:flex-row">
       <img src={img} alt={title} class="max-w-full md:max-w-[13rem] rounded-lg mx-2" />
       <div class="grow w-full">
-        <h1 class="text-xl font-bold">
+        <h1 class="text-xl font-bold flex items-center">
           {title}
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>

@@ -2,7 +2,7 @@
 layout: "../../layouts/ProjectLayout.astro"
 title: "Windows Spotlight"
 description: "Extract Windows Lockscreen Images with the help of a single command."
-heroImage: "/project-images/windows-spotlight-images.png"
+heroImage: "/project-images/windows-spotlight-images.webp"
 projectURL: "https://github.com/krishna-santosh/Windows_Spotlight"
 ---
 

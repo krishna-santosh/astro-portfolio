@@ -55,7 +55,8 @@ const themes = ["cupcake", "dark", "valentine", "retro", "garden", "forest", "pa
   if (theme) {
     updateTheme(theme);
   } else {
-    updateTheme("cupcake");
+    const prefrence = (window.matchMedia("(prefers-color-scheme:dark)").matches)?"dracula":"cupcake";
+    updateTheme(prefrence);
   }
 
   theme_selectors.forEach((selector) => {

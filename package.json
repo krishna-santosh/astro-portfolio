@@ -1,6 +1,6 @@
 {
-  "name": "ks",
-  "description": "Protfolio",
+  "name": "astro-portfolio",
+  "description": "Portfolio and Blog with Astro, Tailwind CSS and daisyUI",
   "type": "module",
   "version": "1.1.1",
   "private": true,

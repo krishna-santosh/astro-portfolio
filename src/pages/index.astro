@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import { SOCIALS } from "../config";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -19,7 +20,7 @@ const last_projects = projects.slice(0, 3);
     <div class="pb-10 mt-5">
       <div class="text-xl py-5">Hey there 👋</div>
       <div class="text-3xl sm:text-4xl md:text-5xl  font-bold">I'm Krishna Santosh</div>
-      <div class="py-3"> <a href="https://github.com/krishna-santosh" target="_blank">Dev 💻 </a>| <a href="https://youtube.com/@krishna-santosh" target="_blank"> Content Creator 🌱 </a>| <a href="#"> Stargazer 🔭</a></div>
+      <div class="py-3"> <a href={"https://github.com/"+SOCIALS.github} target="_blank">Dev 💻 </a>| <a href={"https://youtube.com/@"+SOCIALS.youtube_handle} target="_blank"> Content Creator 🌱 </a>| <a href="#"> Stargazer 🔭</a></div>
       <div class="py-2">
         <text class="text-lg">
           I am a developer with a passion for Linux, open source, and all things space-related. In addition to my work as a developer, I also enjoy creating YouTube videos and sharing my knowledge and insights with others.
@@ -27,11 +28,11 @@ const last_projects = projects.slice(0, 3);
         >
       </div>
       <div class="lg:block hidden mt-8">
-        <a class="btn" href="https://www.linkedin.com/in/krishna-santosh" target="_blank"> Let's connect!</a>
+        <a class="btn" href={"https://www.linkedin.com/in/"+SOCIALS.linkedin} target="_blank"> Let's connect!</a>
       </div>
       <div class="lg:hidden social-icons mt-4 flex self-start">
         <a
-          href="https://github.com/krishna-santosh"
+          href={"https://github.com/"+SOCIALS.github}
           target="_blank"
           class="mr-3"
           aria-label="Github"
@@ -49,7 +50,7 @@ const last_projects = projects.slice(0, 3);
         </a>
   
         <a
-          href="https://instagram.com/aiastrophile"
+          href={"https://instagram.com/"+SOCIALS.instagram}
           target="_blank"
           class="mx-3"
           aria-label="Instagram"
@@ -67,7 +68,7 @@ const last_projects = projects.slice(0, 3);
         </a>
   
         <a
-        href="https://www.linkedin.com/in/krishna-santosh"
+        href={"https://www.linkedin.com/in/"+SOCIALS.linkedin}
         target="_blank"
         class="mx-3"
         aria-label="Linkedin"
@@ -85,7 +86,7 @@ const last_projects = projects.slice(0, 3);
          </a>
   
         <a
-          href="https://twitter.com/aiastrophile"
+          href={"https://twitter.com/"+SOCIALS.twitter}
           target="_blank"
           class="mx-3"
           aria-label="Twitter"
@@ -103,7 +104,7 @@ const last_projects = projects.slice(0, 3);
         </a>
   
         <a
-          href="https://youtube.com/@krishna-santosh"
+          href={"https://youtube.com/@"+SOCIALS.youtube_handle}
           target="_blank"
           class="mx-3"
           aria-label="Youtube"

@@ -3,3 +3,12 @@
 
 export const SITE_TITLE = 'Krishna Santosh';
 export const SITE_DESCRIPTION = "Krishna Santosh's Personal Portfolio";
+
+export const SOCIALS = {
+    email: "hello@krishna-santosh.com",
+    github: "krishna-santosh",
+    instagram: "aiastrophile",
+    linkedin: "krishna-santosh",
+    twitter: "aiastrophile",
+    youtube_handle: "krishna-santosh"
+}

@@ -1,3 +1,7 @@
+---
+import { SOCIALS } from "../config";
+---
+
 <div class="drawer-side bg-base-200">
   <label for="my-drawer" class="drawer-overlay bg-base-200"></label>
   <div class="menu p-4 overflow-y-auto w-[19rem] bg-base-200 text-base-content">
@@ -47,7 +51,7 @@
 
     <div class="lg:flex hidden social-icons px-4 my-2 self-center">
       <a
-        href="https://github.com/krishna-santosh"
+        href={"https://github.com/"+SOCIALS.github}
         target="_blank"
         class="mx-3"
         aria-label="Github"
@@ -64,7 +68,7 @@
         </svg>
       </a>
       <a
-        href="https://instagram.com/aiastrophile"
+        href={"https://instagram.com/"+SOCIALS.instagram}
         target="_blank"
         class="mx-3"
         aria-label="Instagram"
@@ -81,7 +85,7 @@
         </svg>
       </a>
       <a
-        href="https://twitter.com/aiastrophile"
+        href={"https://twitter.com/"+SOCIALS.twitter}
         target="_blank"
         class="mx-3"
         aria-label="Twitter"
@@ -98,7 +102,7 @@
         </svg>
       </a>
       <a
-        href="https://youtube.com/@krishna-santosh"
+        href={"https://youtube.com/@"+SOCIALS.youtube_handle}
         target="_blank"
         class="mx-3"
         aria-label="Youtube"

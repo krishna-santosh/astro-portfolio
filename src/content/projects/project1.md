@@ -1,7 +1,7 @@
 ---
 title: "Windows Spotlight"
 description: "Extract Windows Lockscreen Images with the help of a single command."
-pubDate: "Jan 2 2022"
+pubDate: "Oct 6 2022"
 heroImage: "/project-images/windows-spotlight-images.webp"
 projectURL: "https://github.com/krishna-santosh/Windows_Spotlight"
 ---

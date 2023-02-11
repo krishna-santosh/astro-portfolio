@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "strictNullChecks": true
+  },
   "extends": "astro/tsconfigs/base",
   "exclude": [
     "node_modules",

@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/PostLayout.astro"
 title: "My First Blog"
 description: "Exploring the world one post at a time and discovering new perspectives."
 pubDate: "Dec 30 2022"

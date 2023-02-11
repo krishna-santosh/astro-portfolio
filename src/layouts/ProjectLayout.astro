@@ -2,18 +2,13 @@
 import BaseLayout from "./BaseLayout.astro";
 
 export interface Props {
-  content: {
     title: string;
     description: string;
-    heroImage?: string;
-    badge: string;
+    heroImage: string;
     projectURL: string;
   };
-}
 
-const {
-  content: { title, description, heroImage, projectURL },
-} = Astro.props;
+const{ title, description, heroImage, projectURL } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>

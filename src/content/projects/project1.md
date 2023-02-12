@@ -1,5 +1,6 @@
 ---
 title: "Windows Spotlight"
+slug: windows-spotlight  
 description: "Extract Windows Lockscreen Images with the help of a single command."
 pubDate: "Oct 6 2022"
 heroImage: "/project-images/windows-spotlight-images.webp"

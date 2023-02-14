@@ -13,6 +13,13 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.prop
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
+    <script is:inline>
+      if (localStorage.getItem("data-theme") === null) {
+        document.documentElement.setAttribute("data-theme", (window.matchMedia("(prefers-color-scheme:dark)").matches) ? "dark" : "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+      }
+    </script>
     <BaseHead title={title} description={description} image={image} />
   </head>
   <ContactModal />

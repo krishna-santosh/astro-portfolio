@@ -50,23 +50,15 @@ const themes = ["light", "dark", "cupcake", "valentine", "retro", "halloween", "
   const theme_selectors = document.querySelectorAll(
     "#theme-selector div[data-theme]"
   );
-  const theme = window.localStorage.getItem("data-theme");
-
-  if (theme) {
-    updateTheme(theme);
-  } else {
-    const prefrence = (window.matchMedia("(prefers-color-scheme:dark)").matches)?"dark":"light";
-    updateTheme(prefrence);
-  }
 
   theme_selectors.forEach((selector) => {
     selector.addEventListener("click", () => {
-      updateTheme(selector.getAttribute("data-theme"));
+      updateTheme(selector.getAttribute("data-theme")!);
     });
   });
 
   function updateTheme(newTheme: string) {
-    document.querySelector("html").setAttribute("data-theme", newTheme);
-    window.localStorage.setItem("data-theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("data-theme", newTheme);
   }
 </script>

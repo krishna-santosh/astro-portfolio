@@ -8,3 +8,19 @@
         line-height: 1.25rem
     }
 }
+
+::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+
+::-webkit-scrollbar-track{
+    @apply bg-transparent rounded-full m-1;
+}
+
+#theme-list::-webkit-scrollbar-track{
+    @apply bg-transparent rounded-full m-4;
+}
+
+::-webkit-scrollbar-thumb{
+    @apply bg-gray-600 rounded-full hover:bg-secondary;
+}
